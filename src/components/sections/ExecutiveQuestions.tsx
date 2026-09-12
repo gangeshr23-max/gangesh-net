@@ -1,0 +1,2 @@
+const q=['Where are we losing performance and money?','What should we change first?','How do we execute the improvement and sustain the results?'];
+export default function ExecutiveQuestions(){return <section className="section-tight bg-[var(--paper)] border-y rule"><div className="shell grid md:grid-cols-3">{q.map((x,i)=><div key={x} className={`py-6 md:px-7 ${i? 'md:border-l rule':''}`}><div className="smallcaps">Question 0{i+1}</div><div className="font-serif text-3xl mt-4 leading-tight">{x}</div></div>)}</div></section>}

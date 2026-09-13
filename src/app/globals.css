@@ -1,33 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  /* GANGESH.NET — DARK INDUSTRIAL EXECUTIVE PALETTE */
   --ink: #f3f1ea;
   --muted: #aab8c3;
-
   --paper: #071521;
   --paper-2: #0b1d2a;
   --white: #102838;
-
   --line: #28404f;
-
   --accent: #66aeb9;
   --accent-2: #8fb8c2;
-
   --deep: #050f17;
   --surface-raised: #102838;
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--paper); }
 body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+input, textarea, select { color-scheme: dark; }
 ::selection { background: var(--accent); color: var(--deep); }
 
 .shell { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
@@ -38,12 +36,18 @@ a { color: inherit; text-decoration: none; }
 .rule { border-color: var(--line); }
 .btn-primary { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; background:var(--accent); color:var(--deep); padding:14px 20px; font-weight:700; font-size:14px; letter-spacing:.02em; transition:.2s ease; }
 .btn-primary:hover { background:#82c0ca; transform:translateY(-1px); }
+.btn-primary:focus-visible, .btn-secondary:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
 .btn-secondary { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; border:1px solid var(--line); color:var(--ink); padding:13px 20px; font-weight:700; font-size:14px; transition:.2s ease; }
-.btn-secondary:hover { background:var(--white); border-color:var(--accent); }
+.btn-secondary:hover { background:var(--surface-raised); border-color:var(--accent); }
 .section { padding: 96px 0; }
 .section-tight { padding: 72px 0; }
 .card-line { border-top:1px solid var(--line); padding-top:22px; }
 .smallcaps { text-transform:uppercase; letter-spacing:.1em; font-size:11px; font-weight:700; color:var(--muted); }
+.form-label { color:var(--ink); font-size:13px; line-height:1.4; font-weight:700; }
+.contact-card { display:flex; flex-direction:column; gap:.45rem; border:1px solid var(--line); background:var(--paper-2); padding:18px 20px; transition:.2s ease; }
+.contact-card strong { color:var(--ink); font-size:14px; }
+.contact-card > span:last-child { color:var(--muted); font-size:12px; }
+a.contact-card:hover { border-color:var(--accent); background:var(--surface-raised); }
 
 @media (max-width: 768px) {
   .shell { padding: 0 18px; }

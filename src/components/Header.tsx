@@ -11,10 +11,10 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b rule bg-[rgba(7,21,33,.94)] backdrop-blur">
-      <div className="shell h-20 flex items-center justify-between">
-        <Link href="/" className="leading-tight" onClick={() => setOpen(false)}>
-          <div className="font-bold tracking-[.08em] text-sm">GANGESH VIVEKANANDAN</div>
-          <div className="text-xs text-[var(--muted)] mt-1">Manufacturing Transformation Consultant</div>
+      <div className="shell min-h-20 py-3 flex items-center justify-between gap-6">
+        <Link href="/" className="leading-tight shrink-0" onClick={() => setOpen(false)}>
+          <div className="font-bold tracking-[.07em] text-base md:text-lg">GANGESH VIVEKANANDAN</div>
+          <div className="text-sm text-[var(--accent)] mt-1">Manufacturing Transformation Consultant</div>
         </Link>
         <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold">
           {links.map(([label, href]) => <Link key={href} href={href} className="hover:text-[var(--accent)]">{label}</Link>)}
